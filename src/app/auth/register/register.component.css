@@ -1,0 +1,506 @@
+/* register.component.css */
+
+/* Base Styles */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(244, 63, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+.register-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Left Side - Branding & Benefits */
+.register-left {
+  flex: 1;
+  padding: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.register-brand i {
+  font-size: 2.2rem;
+  color: #f43f5e;
+  animation: pulse 2s infinite;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f43f5e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.register-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.register-left p {
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Title Styles */
+.hero-style-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.title-line {
+  display: block;
+}
+
+.accent {
+  color: #f43f5e;
+}
+
+.hero-style-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+}
+
+/* Benefits Section */
+.register-benefits {
+  margin-top: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 63, 94, 0.2);
+  border-radius: 12px;
+}
+
+.benefit-icon i {
+  font-size: 1.5rem;
+  color: #f43f5e;
+}
+
+.benefit-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.benefit-text p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Right Side - Registration Form */
+.register-form-container {
+  flex: 1;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.register-form h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #f43f5e;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group i {
+  position: absolute;
+  left: 1rem;
+  top: 38px;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Select Input Styles */
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #f43f5e;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.form-group select option {
+  background: #1e293b;
+  color: white;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #f43f5e;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #e11d48;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  background: rgba(244, 63, 94, 0.5);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn i {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Form Footer Styles */
+.form-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-footer a {
+  color: #f43f5e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+  color: #e11d48;
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-error i {
+  font-size: 1.2rem;
+}
+
+.form-group-error {
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.form-group-error ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-group-error li {
+  margin-bottom: 0.25rem;
+}
+
+.form-group-error li::before {
+  content: "•";
+  color: rgba(244, 63, 94, 0.8);
+  margin-right: 0.5rem;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Form Validation Styles */
+.form-group input.ng-touched.ng-invalid {
+  border-color: #ef4444;
+}
+
+.form-group input.ng-touched.ng-valid {
+  border-color: #10b981;
+}
+
+.form-group select.ng-touched.ng-invalid {
+  border-color: #ef4444;
+}
+
+.form-group select.ng-touched.ng-valid {
+  border-color: #10b981;
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+.form-group:nth-child(4) { animation-delay: 0.4s; }
+.form-footer { animation-delay: 0.5s; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-left,
+  .register-form-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    padding: 1rem;
+  }
+
+  .hero-style-title {
+    font-size: 2rem;
+  }
+
+  .benefit-item {
+    padding: 0.75rem;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .register-left {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .register-form-container {
+    padding: 3rem 2rem;
+  }
+
+  .register-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .register-page {
+    padding: 1rem;
+  }
+
+  .register-left, 
+  .register-form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .register-left h1 {
+    font-size: 2rem;
+  }
+
+  .register-form h2 {
+    font-size: 1.75rem;
+  }
+}

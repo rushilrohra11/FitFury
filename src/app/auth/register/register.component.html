@@ -1,0 +1,119 @@
+<div class="register-page">
+  <div class="register-background"></div>
+  <div class="register-container">
+    <div class="register-left">
+      <!-- <div class="register-brand">
+        <i class="fa-solid fa-bicycle"></i>
+        <span class="logo-text">FitFury</span>
+      </div> -->
+      <h1 class="hero-style-title">
+        <span class="title-line">Start Your</span>
+        <span class="title-line accent">Fitness Journey</span>
+        <span class="title-line">Today</span>
+      </h1>
+      <p class="hero-style-subtitle">Join our community of 50,000+ members achieving their fitness goals</p>
+      
+      <div class="register-benefits">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <div class="benefit-text">
+            <h3>Personalized Workouts</h3>
+            <p>Custom plans tailored to your goals</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="benefit-text">
+            <h3>Nutrition Guidance</h3>
+            <p>Expert dietary recommendations</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="benefit-text">
+            <h3>Progress Tracking</h3>
+            <p>Monitor your fitness journey</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-form-container">
+      <div class="form-card">
+        <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <h2>Create Your Account</h2>
+          
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <div class="input-wrapper">
+              <input type="text" id="name" formControlName="name" placeholder="Enter your full name">
+              <!-- <i class="fa-solid fa-user"></i> -->
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+              <!-- <i class="fa-solid fa-envelope"></i> -->
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <input type="password" id="password" formControlName="password" placeholder="Create a password">
+              <!-- <i class="fa-solid fa-lock"></i> -->
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="goals">Fitness Goals</label>
+            <div class="input-wrapper">
+              <select id="goals" formControlName="goals">
+                <option value="">Select your primary goal</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="muscle-gain">Muscle Gain</option>
+                <option value="endurance">Endurance</option>
+                <option value="flexibility">Flexibility</option>
+              </select>
+              <!-- <i class="fa-solid fa-bullseye"></i> -->
+            </div>
+          </div>
+
+          <div class="form-error" *ngIf="errorMessage">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            {{ errorMessage }}
+          </div>
+
+          <button type="submit" class="submit-btn" [disabled]="!registerForm.valid || isLoading">
+            <span *ngIf="!isLoading">Create Account</span>
+            <span *ngIf="isLoading">Creating Account...</span>
+            <i class="fa-solid" [class.fa-arrow-right]="!isLoading" [class.fa-spinner]="isLoading"></i>
+          </button>
+
+          <div class="form-group-error" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+            <small>Password must contain at least:</small>
+            <ul>
+              <li>8 characters</li>
+              <li>One uppercase letter</li>
+              <li>One lowercase letter</li>
+              <li>One number</li>
+              <li>One special character</li>
+            </ul>
+          </div>
+
+          <div class="form-footer">
+            <p>Already have an account? <a routerLink="/auth/login">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
